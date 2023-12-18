@@ -1,0 +1,49 @@
+.card {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #17202A;
+
+  display: flex;
+  flex-direction: column;
+  
+  border: solid #C0C0C0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px 10px;
+
+  animation: 1s change-color 1;
+  transition:
+    font-weight: 1s,
+    background-color: 1s,
+    transform: 1s;
+  transition-timing-function: ease-in;
+}
+
+.card:hover,
+.card:active {
+  font-weight: bold;
+  background-color: black;
+  transform: scale(1.05,1.05);
+}
+
+@keyframes change-color {
+  from {
+    background-color: #17202A;
+  }
+  
+  50% {
+    background-color: black;
+    border: solid white;
+  }
+
+  to {
+    background-color: #17202A;
+  }
+}
+
+.card { 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

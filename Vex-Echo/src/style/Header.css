@@ -1,0 +1,23 @@
+.header-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-con.header-score {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-item {
+    width: 15vw;
+}
+
+.header-btn {
+    padding: 2px 4px;
+}
+
+.header-btn:hover {
+    background-color: #f1f1f1;
+    color: black;
+}

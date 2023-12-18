@@ -1,0 +1,11 @@
+.bodyCon {
+  	flex: 1;
+}
+
+.con {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 25px 150px;
+	height: 50vh;
+}
+
