@@ -8,12 +8,12 @@ import FlagCard from './FlagCard.jsx'
 
 export const CountriesDispatchContext = createContext(null);
 
-export default function Body({ region, score, onChange}) {
+export default function Body({ region, score, onChange, onReset }) {
 	let initCountries, maxScore;
 	switch(region) {
 	  case 'World': {
 	    initCountries = worldData;
-	    maxScore = initCountries.length;
+	    maxScore = worldData.length;
 	    break;
 	  }
 	  default:
@@ -22,7 +22,10 @@ export default function Body({ region, score, onChange}) {
 	}
 	
 	const [listCountries, dispatch] = useReducer(countryReducer, initCountries);
-	
+	onChange(listCountries.filter(c => c.seen === 'T').length);
+
+	console.log(listCountries.filter(c => c.seen !== 'T' && c.seen !== 'F').length);
+
 	const displayCountries = shuffleArrayN(listCountries, score, maxScore).map(country =>
 		<FlagCard 
 		  key={country.name} 
@@ -41,6 +44,31 @@ export default function Body({ region, score, onChange}) {
 }
 
 function countryReducer(countries, action) {
-
+    switch (action.type) {
+	case 'selected': {
+		return countries.map(c => {
+			if (c.iso_code === action.iso_code) {
+			    if (c.seen === 'F') {
+				return {
+				    name: action.name,
+				    iso_code: action.iso_code,
+				    seen: 'T'
+				}
+			    } else {
+				return {
+				    name: action.name,
+				    iso_code: action.iso_code,
+			            seen: 'D'
+			        }
+			    }
+			} else {
+				return c;
+			}
+		});
+	}
+	default: {
+		alert("No matching country found");
+	}
+    }
 }
 

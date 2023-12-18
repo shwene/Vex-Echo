@@ -2,6 +2,8 @@
 export function shuffleArrayN (array, score, maxScore) {
 	const tempArray = shuffleArray(array);
 	const newArray = [];
+	console.log(score);
+	console.log(maxScore);
 
 	let numSeen, numUnseen;
 	if (score < 6) {
@@ -18,6 +20,10 @@ export function shuffleArrayN (array, score, maxScore) {
 	let currSeen = 0;
 	let currUnseen = 0;
 	for (let i = tempArray.length - 1; i > 0; i--) {
+		console.log(currSeen);
+		console.log(numSeen);
+		console.log(currUnseen);
+		console.log(numUnseen);
 		if (currUnseen === numUnseen && currSeen === numSeen) {
 			break;
 		}
@@ -33,6 +39,13 @@ export function shuffleArrayN (array, score, maxScore) {
 			}
 			currSeen++;
 		}
+		console.log(tempArray[i].name);
+		console.log(tempArray[i].seen);
+		console.log(currSeen);
+		console.log(numSeen);
+		console.log(currUnseen);
+		console.log(numUnseen);
+
 		newArray.push(tempArray[i]);
 	}
 	return newArray;

@@ -10,6 +10,10 @@ function App() {
   const [score, setScore] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  function handleScoreChange(n) {
+      setScore(n);
+  }
+
   return (
     <div className='mainCon'>
         {!isPlaying ? (
@@ -25,7 +29,8 @@ function App() {
 	        key={region} 
 	        region={region} 
 	        score={score} 
-	        onChange={() => setScore(n => n + 1)}
+	        onChange={handleScoreChange}
+		onReset={() => setReset(0)}
 	      />
 	      <Footer />
 	      </>
