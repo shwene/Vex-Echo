@@ -6,18 +6,26 @@ import Body from './Body.jsx'
 import Menu from './Menu.jsx'
 
 function App() {
-  const [region, setRegion] = useState('World');//chnaged by menu page later
+  const [region, setRegion] = useState('World');
   const [score, setScore] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   function handleScoreChange(n) {
       setScore(n);
   }
 
+  function handleRegionChange(r) {
+      setRegion(r);
+  }
+
   return (
-    <div className='mainCon'>
+    <>
+    <div id="unsupported-message">
+	Application is unsupported for screen widths below 1280 pixels
+    </div>
+    <div className='mainCon' id="content-container">
         {!isPlaying ? (
-		<Menu region={region} onPlay={() => setIsPlaying(true)} /> 
+		<Menu onRegion={handleRegionChange} onPlay={() => setIsPlaying(true)} /> 
 	) : (
 	     <>
 	     <Header 
@@ -35,7 +43,8 @@ function App() {
 	      <Footer />
 	      </>
 	)}
-    </div>
+      </div>
+    </>
   )
 }
 

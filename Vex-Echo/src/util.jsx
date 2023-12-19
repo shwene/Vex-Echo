@@ -1,9 +1,86 @@
+import { worldData, asiaData, northAmericaData, southAmericaData, 
+	africaData, oceaniaData, europeData } from './assets/data.js'
+
+export function getDataByRegion(region) {
+	switch(region) {
+	  case 'World': {
+	    return worldData;
+	  }
+	  case 'Asia': {
+	    return asiaData;
+	  }
+	  case 'North America': {
+	    return northAmericaData;
+	  }
+	  case 'South America': {
+	    return southAmericaData;
+	  }
+	  case 'Africa': {
+	    return africaData;
+	  }
+	  case 'Oceania': {
+	    return oceaniaData;
+	  }
+	  case 'Europe': {
+	    return europeData;
+	  }
+	  default:
+	    alert("No Countries Loaded");
+	}
+}
+
+export function getMaxScoreByRegion(region) {
+	switch(region) {
+	  case 'World': {
+	    return worldData.length;
+	  }
+	  case 'Asia': {
+	    return asiaData.length;
+	  }
+	  case 'North America': {
+	    return northAmericaData.length;
+	  }
+	  case 'South America': {
+	    return southAmericaData.length;
+	  }
+	  case 'Africa': {
+	    return africaData.length;
+	  }
+	  case 'Oceania': {
+	    return oceaniaData.length;
+	  }
+	  case 'Europe': {
+	    return europeData.length;
+	  }
+	  default:
+	    alert("No Countries Loaded");
+	}
+}
+
+export function getRegionCode(region) {
+	switch(region) {
+	  case 'World':
+		return 'W';
+	  case 'Asia':
+		return 'AS';
+	  case 'North America':
+		return 'NA';
+	  case 'South America':
+		return 'SA';
+	  case 'Oceania':
+		return 'OA';
+	  case 'Africa':
+		return 'AF';
+	  case 'Europe':
+		return 'EU';
+	}
+}
+
 //12 is used as magic number as we set only 12 cards in each round;
-export function shuffleArrayN (array, score, maxScore) {
+export function shuffleArrayN (array, score, maxScore) {	
+	score %= 12; //handle with multiple round wins
 	const tempArray = shuffleArray(array);
 	const newArray = [];
-	console.log(score);
-	console.log(maxScore);
 
 	let numSeen, numUnseen;
 	if (score < 6) {
@@ -19,11 +96,7 @@ export function shuffleArrayN (array, score, maxScore) {
 
 	let currSeen = 0;
 	let currUnseen = 0;
-	for (let i = tempArray.length - 1; i > 0; i--) {
-		console.log(currSeen);
-		console.log(numSeen);
-		console.log(currUnseen);
-		console.log(numUnseen);
+	for (let i = tempArray.length - 1; i >= 0; i--) {
 		if (currUnseen === numUnseen && currSeen === numSeen) {
 			break;
 		}
@@ -39,13 +112,6 @@ export function shuffleArrayN (array, score, maxScore) {
 			}
 			currSeen++;
 		}
-		console.log(tempArray[i].name);
-		console.log(tempArray[i].seen);
-		console.log(currSeen);
-		console.log(numSeen);
-		console.log(currUnseen);
-		console.log(numUnseen);
-
 		newArray.push(tempArray[i]);
 	}
 	return newArray;

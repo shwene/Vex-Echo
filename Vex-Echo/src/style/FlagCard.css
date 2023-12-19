@@ -12,7 +12,7 @@
   padding: 10px;
   margin: 5px 10px;
 
-  animation: 1s change-color 1;
+  animation: 0.75s change-color 1;
   transition:
     font-weight: 1s,
     background-color: 1s,

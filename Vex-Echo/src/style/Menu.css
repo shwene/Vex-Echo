@@ -1,5 +1,5 @@
 .menu-con {
-  background-image: url('https://img.freepik.com/free-photo/desk-with-maps-touristic-items_23-2147732923.jpg?w=996&t=st=1702902104~exp=1702902704~hmac=b57fd371f543b87ad9050fff531898f834c19c2a1feeced8e739aca08800de6a');
+  background-image: url('../assets/desk-with-map.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -9,4 +9,25 @@
   width: 99vw;
   max-width: 100%;
   max-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.menu-con h1 {
+  background-color: rgba(229, 196, 84, .8);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  margin: 0;
+  padding: 50;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
 }
