@@ -16,6 +16,7 @@ function App() {
 
   function handleRegionChange(r) {
       setRegion(r);
+      setScore(0);
   }
 
   return (
