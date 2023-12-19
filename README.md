@@ -35,7 +35,7 @@ Ready to embark on a journey of flag discovery? Start playing **Vex-Echo** now a
 ### Credits
 <p>Game Design inspired from <a href="https://www.theodinproject.com">The Odin Project</a></p>
 
-<p>Images of flags obtained from <a href="https://flagcdn.com">Flagpedia></p>
+<p>Images of flags obtained from <a href="https://flagcdn.com">Flagpedia</a></p>
 
 <p>Background images obtained from <a href="https://www.freepik.com/free-photo/globe-placed-map_1526568.htm#query=geography%20background&position=28&from_view=keyword&track=ais&uuid=5066b4b6-7f09-428c-b357-de8017897cd7)i">Freepik</a></p> 
 
