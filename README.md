@@ -5,13 +5,13 @@ Welcome to the Memory Flag Challenge! Test your memory and knowledge of national
 
 <p>Challenge yourself to achieve the highest score and become a <em>flag master!</em></p>
 
-####Scoring:
+#### Scoring:
 <ul>
     Each unique flag click earns you points.
     The longer your streak without repeating flags, the higher your score.
     Clicking on 
 </ul>
-####Tips:
+#### Tips:
 <ul>
     Pay attention to the flags you've chosen in previous rounds.
     Test your memory and try to recognize flags quickly.
@@ -31,11 +31,11 @@ Ready to embark on a journey of flag discovery? Start playing **Vex-Echo** now a
 <li>HTML</li>
 </ul>
 
-###Credits
-<p>Game Design inspired from [The Odin Project](https://www.theodinproject.com)</p>
+### Credits
+<p>Game Design inspired from <a href="https://www.theodinproject.com">The Odin Project</a></p>
 
 <p>Images of flags obtained from <flagcdn.com></p>
 
-<p>Background images obtained from [Freepik](https://www.freepik.com/free-photo/globe-placed-map_1526568.htm#query=geography%20background&position=28&from_view=keyword&track=ais&uuid=5066b4b6-7f09-428c-b357-de8017897cd7)</p> 
+<p>Background images obtained from <a href="https://www.freepik.com/free-photo/globe-placed-map_1526568.htm#query=geography%20background&position=28&from_view=keyword&track=ais&uuid=5066b4b6-7f09-428c-b357-de8017897cd7)i">Freepik</a></p> 
 
-<p>ChatGPT for description of the application</p>
+<p>ChatGPT for Application Description</p>
