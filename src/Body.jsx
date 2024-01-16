@@ -18,6 +18,7 @@ export default function Body({ region, score, onChange, onReset }) {
 	if (listCountries.filter(c => c.seen === 'D').length) {
 		scoreRef.current = 0;
 		dispatch({type:'reset'});
+		alert("GG! Time to consult Shwene ? ");
 	} else {
 		scoreRef.current = roundWins * 12 + listCountries.filter(c => c.seen === 'T').length;
 	}
